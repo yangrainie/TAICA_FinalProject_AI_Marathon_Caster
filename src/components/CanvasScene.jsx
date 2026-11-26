@@ -16,7 +16,7 @@ export default function CanvasScene() {
     <Canvas camera={{ position: [0, 8, 20], fov: 50 }}>
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 5]} intensity={1} />
-      <Sky sunPosition={[100, 20, 100]} />   {/* 可根據 weather 調整 */}
+      <Sky sunPosition={[100, 20, 100]} />
       <Track scene={scene} />
       {isRunning && runners.map(r => (
         <Runner key={r.id} {...r} />
@@ -24,4 +24,4 @@ export default function CanvasScene() {
       <OrbitControls />
     </Canvas>
   );
-}s
+}
